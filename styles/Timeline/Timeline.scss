@@ -1,0 +1,1543 @@
+
+
+.BigTimelineContainer{
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    overflow: hidden;
+    
+
+    .TimelineContainer{
+        width: 100%;
+        margin: 20px;
+        overflow-x: scroll;
+        padding: 0px 0px 55px 0px;
+        position: relative;
+
+    }
+
+
+
+
+    .TimelineContainer::-webkit-scrollbar {
+        width: 2px;
+        
+    }
+    
+    .TimelineContainer::-webkit-scrollbar-track {
+        background-color: transparent;
+      }
+    
+    
+    .TimelineContainer::-webkit-scrollbar-thumb {
+        background-color: var(--MainColor);
+        border-radius: 250px;
+        -webkit-border-radius: 250px;
+        -moz-border-radius: 250px;
+        -ms-border-radius: 250px;
+        -o-border-radius: 250px;
+        visibility: hidden;
+    }
+    
+    
+    .TimelineContainer:hover::-webkit-scrollbar-thumb{
+        transition: .3s all linear;
+        -webkit-transition: .3s all linear;
+        -moz-transition: .3s all linear;
+        -ms-transition: .3s all linear;
+        -o-transition: .3s all linear;
+        visibility: visible;
+    }
+}
+
+
+.TimelinePoster{
+    background-color: #0D0C10;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    overflow: hidden;
+ 
+
+    
+    .Filters{
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 3px solid #1A1922;
+
+        button{
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--ArabicLinksFont);
+            color: #6D6B78;
+            width: 100%;
+            height: 60px;
+            font-size: 17px;
+            justify-content: center;
+            transition: .3s all linear;
+            -webkit-transition: .3s all linear;
+            -moz-transition: .3s all linear;
+            -ms-transition: .3s all linear;
+            -o-transition: .3s all linear;
+            position: relative;
+            font-weight: 500;
+
+            .PosterIcon{
+                font-size: 18px;
+            }
+
+        }
+
+        button:hover{
+            background-color: #1A1922;
+            color: rgba(255, 255, 255, 0.616);
+        }
+
+
+        button:after{
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            width: 100%;
+            height: 3px;
+            background-color: transparent;
+            border-radius: 25px;
+            -webkit-border-radius: 25px;
+            -moz-border-radius: 25px;
+            -ms-border-radius: 25px;
+            -o-border-radius: 25px;
+            transition: .3s all linear;
+            -webkit-transition: .3s all linear;
+            -moz-transition: .3s all linear;
+            -ms-transition: .3s all linear;
+            -o-transition: .3s all linear;
+        }
+
+
+        button:hover:after{
+            background-color: #ffb33171;
+        }
+
+
+        .ActiveBtn{
+            background-color: black;
+            color: white;
+            .PosterIcon{
+                color: var(--MainColor);
+            }
+        }
+
+
+        .ActiveBtn:hover{
+            background-color: black;
+            color: white;
+        }
+
+        .ActiveBtn:after{
+            background-color: var(--MainColor);
+        }
+
+        .ActiveBtn:hover:after{
+            background-color: var(--MainColor);
+        }
+
+
+    }
+
+
+    .PostPost{
+        height: 300px;
+        width: 100%;
+
+        .MentionsView{
+            width: 100%;
+            display: flex;
+            gap: 15px;
+            justify-content: space-around;
+            margin-top: 25px;
+
+            p{
+                color: gray;
+                font-family: var(--ArabicLinksFont);
+                font-size: 14px;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                cursor: var(--PointerCursor);
+
+                .MentionIcon{
+                    font-size: 18px;
+                    color: var(--MainColor);
+                }
+
+                span{
+                    color: whitesmoke
+                }
+            }
+        }
+
+        .PostPostingArea{
+            height: 165px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            margin-top: 25px;
+            justify-content: center;
+
+            .LeftPosting {
+                cursor: var(--PointerCursor);
+                transition: .3s all linear;
+                -webkit-transition: .3s all linear;
+                -moz-transition: .3s all linear;
+                -ms-transition: .3s all linear;
+                -o-transition: .3s all linear;
+                img{
+                    border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -ms-border-radius: 50%;
+                    -o-border-radius: 50%;
+                    background-color: whitesmoke;
+                }
+            }
+
+            .RightPosting{
+                background-color: #1A1922;
+                width: 75%;
+                height: 120px;
+                border-radius: 45px;
+                -webkit-border-radius: 45px;
+                -moz-border-radius: 45px;
+                -ms-border-radius: 45px;
+                -o-border-radius: 45px;
+                cursor: var(--PointerCursor);
+                padding: 20px 25px;
+                text-align: right;
+                transition: .3s all linear;
+                -webkit-transition: .3s all linear;
+                -moz-transition: .3s all linear;
+                -ms-transition: .3s all linear;
+                -o-transition: .3s all linear;
+
+                p{
+                    margin: 0;
+                    font-family: var(--ArabicLinksFont);
+                    color: gray;
+                    font-size: 13px;
+
+                }
+            }
+
+            .RightPosting:hover{
+                background-color: #111016;
+            }
+
+        }
+
+        .LinePostPost{
+            width: 100%;
+            height: 2px;
+            background-color: #1A1922;
+            margin-top: 20px;
+        }
+
+        .MentionsBtns{
+           
+            height: 70px;
+ 
+            display: flex;
+            justify-content: space-between;
+
+            button{
+                height: 100%;
+                background-color: black;
+                width: 100%;
+                font-size: 15px;
+                display: flex;
+                gap: 7px;
+                align-items: center;
+                justify-content: center;
+
+                .MentionIcon{
+                    font-size: 20px;
+                }
+
+                &:hover{
+                    transition: .3s all linear;
+                    -webkit-transition: .3s all linear;
+                    -moz-transition: .3s all linear;
+                    -ms-transition: .3s all linear;
+                    -o-transition: .3s all linear;
+                    background-color: var(--MainColor);
+                    color: black;
+                }
+                
+            }
+
+            button:not(button:last-child){
+                border-right: 3px solid #1A1922;
+            }
+
+
+        
+        }
+    }
+}
+
+
+
+
+
+
+.TimeLine-R-Post{
+
+    background-color: #0D0C10;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    height: fit-content;
+    margin-top: 25px;
+    overflow: hidden;
+    position: relative;
+
+    .Top-R-Post{
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .LeftPost .MainA{
+            display: flex;
+            gap: 10px;
+
+            div{
+
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+                margin-top: 3px;
+
+                a{
+                    font-family: var(--SecondEnglish);
+                    color: whitesmoke;
+                    font-weight: 600;
+                    display: flex;
+                    gap: 7px;
+
+                    .Verified{
+                        margin-top: -2px;
+                    }
+
+                }
+
+                p{
+                    font-family: var(--SecondEnglish);
+                    margin: 0;
+                    color: gray;
+                    font-weight: 500;
+                    font-size: 13px;
+                }
+                
+            }
+        }
+
+        .RightPost{
+            display: flex;
+            gap: 3px;
+            cursor: var(--PointerCursor);
+            height: 25px;
+            width: 25px;
+            justify-content: center;
+            align-items: center;
+
+            span{
+                width: 4px;
+                height: 4px;
+                background-color: whitesmoke;
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+                transition: .3s all linear;
+                -webkit-transition: .3s all linear;
+                -moz-transition: .3s all linear;
+                -ms-transition: .3s all linear;
+                -o-transition: .3s all linear;  
+
+
+            } 
+            
+            &:hover span:nth-child(1), &:hover span:nth-child(2), &:hover span:nth-child(3){
+                background-color: var(--MainColor);
+            }
+
+        }
+    }
+
+
+    .Body-R-Post{
+
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        p{
+            font-family: var(--ArabicLinksFont);
+            color: whitesmoke;
+            font-size: 16px;
+            text-align: right;
+            word-wrap: break-word;
+        }
+
+        a{
+            color: var(--MainColor);
+            font-size: 16px;
+            text-align: right;
+            font-family: var(--ArabicLinksFont);
+        }
+    }
+
+
+    .Bottom-R-Post{
+        border-top: 3px solid #201E2B;
+        height: 70px;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        
+
+
+        button{
+            background-color: transparent;
+            color: whitesmoke;
+            font-family: var(--ArabicLinksFont);
+            font-size: 14px;
+            width: 100%;
+            gap: 10px;
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            justify-content: center;
+            transition: .3s all linear;
+            -webkit-transition: .3s all linear;
+            -moz-transition: .3s all linear;
+            -ms-transition: .3s all linear;
+            -o-transition: .3s all linear;
+
+            .BotIcon{
+                font-size: 20px;
+
+            }
+
+            .CommentIcon{
+                font-size: 17px;
+            }
+        }
+
+
+
+
+
+        button:hover{
+            background-color: var(--MainColor);
+            color: #0D0C10;
+        }
+
+    }
+
+    .OverDiv{
+        background-color: #1A1922;
+        width: 200px;
+        height: 230px;
+        position: absolute;
+        top: 60px;
+        right: 25px;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+
+
+        .LineOver{
+            height: 4px;
+            width: 90%;
+            background-color: rgb(46, 43, 43);
+            align-self: center;
+        }
+
+        button{
+            height: 100%;
+            width: 100%;
+            background-color: transparent;
+            font-family: var(--ArabicLinksFont);
+            gap: 5px;
+            color: whitesmoke;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            justify-content: flex-end;
+            padding-right: 20px;
+            transition: .3s all linear;
+            -webkit-transition: .3s all linear;
+            -moz-transition: .3s all linear;
+            -ms-transition: .3s all linear;
+            -o-transition: .3s all linear;
+            
+
+            &:hover{
+                background-color: #201E2B;
+            }
+        }
+    }
+}
+
+
+.TimelinePicPost{
+
+    background-color: #0D0C10;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    height: fit-content;
+    margin-top: 25px;
+    overflow: hidden;
+    position: relative;
+
+    .Top-R-Post{
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .LeftPost .MainA{
+            display: flex;
+            gap: 10px;
+
+            div{
+
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+                margin-top: 3px;
+
+                a{
+                    font-family: var(--SecondEnglish);
+                    color: whitesmoke;
+                    font-weight: 600;
+                    display: flex;
+                    gap: 7px;
+
+                    .Verified{
+                        margin-top: -2px;
+                    }
+
+                }
+
+                p{
+                    font-family: var(--SecondEnglish);
+                    margin: 0;
+                    color: gray;
+                    font-weight: 500;
+                    font-size: 13px;
+                }
+                
+            }
+        }
+
+        .RightPost{
+            display: flex;
+            gap: 3px;
+            cursor: var(--PointerCursor);
+            height: 25px;
+            width: 25px;
+            justify-content: center;
+            align-items: center;
+
+            span{
+                width: 4px;
+                height: 4px;
+                background-color: whitesmoke;
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+                transition: .3s all linear;
+                -webkit-transition: .3s all linear;
+                -moz-transition: .3s all linear;
+                -ms-transition: .3s all linear;
+                -o-transition: .3s all linear;  
+
+
+            } 
+            
+            &:hover span:nth-child(1), &:hover span:nth-child(2), &:hover span:nth-child(3){
+                background-color: var(--MainColor);
+            }
+
+        }
+    }
+
+
+
+    .Body-R-Post{
+
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        p{
+            font-family: var(--ArabicLinksFont);
+            color: whitesmoke;
+            font-size: 16px;
+            text-align: right;
+            word-wrap: break-word;
+        }
+
+        a{
+            color: var(--MainColor);
+            font-size: 16px;
+            text-align: right;
+            font-family: var(--ArabicLinksFont);
+        }
+    }
+
+
+    .PostPic{
+        max-height: 450px;
+        display: flex;
+        justify-content: center;
+        cursor: var(--PointerCursor);
+        margin: 25px 0px;
+
+        img{
+            background-color: whitesmoke;
+            max-width: 95%;
+            max-height: 100%;
+            
+        }
+    }
+
+
+    .Bottom-R-Post{
+        border-top: 3px solid #201E2B;
+        height: 70px;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        
+
+
+        button{
+            background-color: transparent;
+            color: whitesmoke;
+            font-family: var(--ArabicLinksFont);
+            font-size: 14px;
+            width: 100%;
+            gap: 10px;
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            justify-content: center;
+            transition: .3s all linear;
+            -webkit-transition: .3s all linear;
+            -moz-transition: .3s all linear;
+            -ms-transition: .3s all linear;
+            -o-transition: .3s all linear;
+
+            .BotIcon{
+                font-size: 20px;
+
+            }
+
+            .CommentIcon{
+                font-size: 17px;
+            }
+        }
+
+
+
+
+
+        button:hover{
+            background-color: var(--MainColor);
+            color: #0D0C10;
+        }
+
+    }
+
+
+    .OverDiv{
+        background-color: #1A1922;
+        width: 200px;
+        height: 230px;
+        position: absolute;
+        top: 60px;
+        right: 25px;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+
+
+        .LineOver{
+            height: 4px;
+            width: 90%;
+            background-color: rgb(46, 43, 43);
+            align-self: center;
+        }
+
+        button{
+            height: 100%;
+            width: 100%;
+            background-color: transparent;
+            font-family: var(--ArabicLinksFont);
+            gap: 5px;
+            color: whitesmoke;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            justify-content: flex-end;
+            padding-right: 20px;
+            transition: .3s all linear;
+            -webkit-transition: .3s all linear;
+            -moz-transition: .3s all linear;
+            -ms-transition: .3s all linear;
+            -o-transition: .3s all linear;
+            
+
+            &:hover{
+                background-color: #201E2B;
+            }
+        }
+    }
+
+}
+
+
+.FullImageView{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.74);
+    right: 0;
+    z-index: 1;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img{
+        width: fit-content;
+        height: fit-content;
+        background-color: whitesmoke;
+        max-height: 95%;
+        max-width: 95%;
+    }
+
+    .CloseIcon{
+        color: white;
+        font-size: 30px;
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        transition: .3s all linear;
+        -webkit-transition: .3s all linear;
+        -moz-transition: .3s all linear;
+        -ms-transition: .3s all linear;
+        -o-transition: .3s all linear;
+
+        &:hover{
+            color: var(--MainColor);
+        }
+    }
+
+}
+
+
+.TimelineVideoPost{
+    background-color: #0D0C10;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    height: fit-content;
+    margin-top: 25px;
+    overflow: hidden;
+    position: relative;
+
+
+    .Top-R-Post{
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .LeftPost .MainA{
+            display: flex;
+            gap: 10px;
+
+            div{
+
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+                margin-top: 3px;
+
+                a{
+                    font-family: var(--SecondEnglish);
+                    color: whitesmoke;
+                    font-weight: 600;
+                    display: flex;
+                    gap: 7px;
+
+                    .Verified{
+                        margin-top: -2px;
+                    }
+
+                }
+
+                p{
+                    font-family: var(--SecondEnglish);
+                    margin: 0;
+                    color: gray;
+                    font-weight: 500;
+                    font-size: 13px;
+                }
+                
+            }
+        }
+
+        .RightPost{
+            display: flex;
+            gap: 3px;
+            cursor: var(--PointerCursor);
+            height: 25px;
+            width: 25px;
+            justify-content: center;
+            align-items: center;
+
+            span{
+                width: 4px;
+                height: 4px;
+                background-color: whitesmoke;
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+                transition: .3s all linear;
+                -webkit-transition: .3s all linear;
+                -moz-transition: .3s all linear;
+                -ms-transition: .3s all linear;
+                -o-transition: .3s all linear;  
+
+
+            } 
+            
+            &:hover span:nth-child(1), &:hover span:nth-child(2), &:hover span:nth-child(3){
+                background-color: var(--MainColor);
+            }
+
+        }
+    }
+
+
+    .Body-R-Post{
+
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        p{
+            font-family: var(--ArabicLinksFont);
+            color: whitesmoke;
+            font-size: 16px;
+            text-align: right;
+            word-wrap: break-word;
+        }
+
+        a{
+            color: var(--MainColor);
+            font-size: 16px;
+            text-align: right;
+            font-family: var(--ArabicLinksFont);
+        }
+    }
+
+
+    .VideoDiv{
+        width: 100%;
+        height: 450px;
+        margin: 25px 0px;
+        display: flex;
+        justify-content: center;
+
+
+
+
+        .InnerVideoDiv{
+            width: 800px;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+
+            @keyframes ControlsUp {
+                from{
+                    bottom: -80px;
+                }to{
+                    bottom: 0;
+                }
+            }
+
+
+            @keyframes ControlsDown {
+                from{
+                    bottom: 0;
+                }to{
+                    bottom: -80px;
+                }
+            }
+
+            video{
+                height: 100%;
+                width: 100%;
+
+            }
+
+
+
+            .VideoEnded{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: var(--PointerCursor);
+                z-index: 1;
+
+                .FillPlay{
+                    font-size: 80px;
+                    color: var(--MainColor);
+                    background-color: white;
+                    border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -ms-border-radius: 50%;
+                    -o-border-radius: 50%;
+                    
+                }
+            }
+
+
+
+
+
+
+
+            .VideoControlls{
+                height: 50px;
+                width: 100%;
+                background-color: rgb(15, 14, 14);
+                position: absolute;
+                bottom: -80px;
+                z-index: 1;
+                left: 0;
+                display: flex;
+                align-items: center;
+                padding: 0px 15px;
+                gap: 10px;
+
+                .PlayIcon{
+                    color: var(--MainColor);
+                    font-size: 35px;
+                    cursor: var(--PointerCursor);
+                }
+
+
+                .SecondController{
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+
+                    .slider {
+                        appearance: none;
+                        -webkit-appearance: none;
+                        width: 100px;
+                        height: 10px;
+                        border-radius: 50px;
+                        -webkit-border-radius: 50px;
+                        -moz-border-radius: 50px;
+                        -ms-border-radius: 50px;
+                        -o-border-radius: 50px;
+                        background: #201E2B;
+                        outline: none;
+                        opacity: 0.7;
+                        -webkit-transition: .2s;
+                        transition: opacity .2s;
+                        cursor: var(--PointerCursor);
+                        background-image: linear-gradient(to right, var(--MainColor), var(--MainColor));
+                        background-repeat: no-repeat;
+                      }
+                      
+                      .slider:hover {
+                        opacity: 1;
+                      }
+                      
+                      .slider::-webkit-slider-thumb {
+                        -webkit-appearance: none;
+                        appearance: none;
+                        width: 12px;
+                        height: 12px;
+                        background: whitesmoke;
+                        border-radius: 50%;
+                        -webkit-border-radius: 50%; 
+                        -moz-border-radius: 50%;
+                        -ms-border-radius: 50%;
+                        -o-border-radius: 50%;
+                        cursor: var(--PointerCursor);
+                        }
+                      
+                      .slider::-moz-range-thumb {
+                        width: 25px;
+                        height: 25px;
+                        background: #04AA6D;
+                        cursor: pointer;
+                      }
+                }
+
+
+                .VolumeIcon{
+                    color: var(--MainColor);
+                    font-size: 25px;
+                    cursor: var(--PointerCursor);
+                }
+
+
+                .ThirdController{
+                    width: 450px;
+                    height: 10px;
+                    border-radius: 20px;
+                    -webkit-border-radius: 20px;
+                    -moz-border-radius: 20px;
+                    -ms-border-radius: 20px;
+                    -o-border-radius: 20px;
+                    padding-bottom: 20px;
+                    margin-left: 15px;
+                    
+
+                    .slider {
+                        appearance: none;
+                        -webkit-appearance: none;
+                        width: 100%;
+                        height: 10px;
+                        border-radius: 50px;
+                        -webkit-border-radius: 50px;
+                        -moz-border-radius: 50px;
+                        -ms-border-radius: 50px;
+                        -o-border-radius: 50px;
+                        background: #201E2B;
+                        outline: none;
+                        cursor: var(--PointerCursor);
+                        background-image: linear-gradient(to right, var(--MainColor), var(--MainColor));
+                        background-repeat: no-repeat;
+
+                    }
+                      
+   
+
+                      
+                      .slider::-webkit-slider-thumb {
+                        -webkit-appearance: none;
+                        appearance: none;
+                        width: 16px;
+                        height: 16px;
+                        background: whitesmoke;
+                        border-radius: 50%;
+                        -webkit-border-radius: 50%; 
+                        -moz-border-radius: 50%;
+                        -ms-border-radius: 50%;
+                        -o-border-radius: 50%;
+                        cursor: var(--PointerCursor);
+             
+        
+                        }
+                      
+                      .slider::-moz-range-thumb {
+                        width: 15px;
+                        height: 15px;
+                        background: whitesmoke;
+                        border-radius: 50%;
+                        -webkit-border-radius: 50%; 
+                        -moz-border-radius: 50%;
+                        -ms-border-radius: 50%;
+                        -o-border-radius: 50%;
+                        cursor: var(--PointerCursor);
+                      }
+
+                }
+
+
+                .FourthController{
+                    display: flex;
+                    gap: 3px;
+                    margin-left: 20px;
+                   
+                    p, span{
+                        font-family: var(--SecondEnglish);
+                        color: whitesmoke;
+                        font-size: 12px;
+                    }
+                }
+
+}
+        }
+
+
+
+
+
+    }
+
+
+    .Bottom-R-Post{
+        border-top: 3px solid #201E2B;
+        height: 70px;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        
+
+
+        button{
+            background-color: transparent;
+            color: whitesmoke;
+            font-family: var(--ArabicLinksFont);
+            font-size: 14px;
+            width: 100%;
+            gap: 10px;
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            justify-content: center;
+            transition: .3s all linear;
+            -webkit-transition: .3s all linear;
+            -moz-transition: .3s all linear;
+            -ms-transition: .3s all linear;
+            -o-transition: .3s all linear;
+
+            .BotIcon{
+                font-size: 20px;
+
+            }
+
+            .CommentIcon{
+                font-size: 17px;
+            }
+        }
+
+
+
+
+
+
+
+
+        button:hover{
+            background-color: var(--MainColor);
+            color: #0D0C10;
+        }
+
+    }
+
+
+
+    .OverDiv{
+        background-color: #1A1922;
+        width: 200px;
+        height: 230px;
+        position: absolute;
+        top: 60px;
+        right: 25px;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+
+
+        .LineOver{
+            height: 4px;
+            width: 90%;
+            background-color: rgb(46, 43, 43);
+            align-self: center;
+        }
+
+        button{
+            height: 100%;
+            width: 100%;
+            background-color: transparent;
+            font-family: var(--ArabicLinksFont);
+            gap: 5px;
+            color: whitesmoke;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            justify-content: flex-end;
+            padding-right: 20px;
+            transition: .3s all linear;
+            -webkit-transition: .3s all linear;
+            -moz-transition: .3s all linear;
+            -ms-transition: .3s all linear;
+            -o-transition: .3s all linear;
+            
+
+            &:hover{
+                background-color: #201E2B;
+            }
+        }
+    }
+
+}
+
+
+.TimelineVotePost{
+
+    background-color: #0D0C10;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    height: fit-content;
+    margin-top: 25px;
+    overflow: hidden;
+    position: relative;
+
+
+    .Top-R-Post{
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .LeftPost .MainA{
+            display: flex;
+            gap: 10px;
+
+            div{
+
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+                margin-top: 3px;
+
+                a{
+                    font-family: var(--SecondEnglish);
+                    color: whitesmoke;
+                    font-weight: 600;
+                    display: flex;
+                    gap: 7px;
+
+                    .Verified{
+                        margin-top: -2px;
+                    }
+
+                }
+
+                p{
+                    font-family: var(--SecondEnglish);
+                    margin: 0;
+                    color: gray;
+                    font-weight: 500;
+                    font-size: 13px;
+                }
+                
+            }
+        }
+
+        .RightPost{
+            display: flex;
+            gap: 3px;
+            cursor: var(--PointerCursor);
+            height: 25px;
+            width: 25px;
+            justify-content: center;
+            align-items: center;
+
+            span{
+                width: 4px;
+                height: 4px;
+                background-color: whitesmoke;
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+                transition: .3s all linear;
+                -webkit-transition: .3s all linear;
+                -moz-transition: .3s all linear;
+                -ms-transition: .3s all linear;
+                -o-transition: .3s all linear;  
+
+
+            } 
+            
+            &:hover span:nth-child(1), &:hover span:nth-child(2), &:hover span:nth-child(3){
+                background-color: var(--MainColor);
+            }
+
+        }
+    }
+
+
+    .Body-R-Post{
+
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        p{
+            font-family: var(--ArabicLinksFont);
+            color: whitesmoke;
+            font-size: 16px;
+            text-align: right;
+            word-wrap: break-word;
+        }
+
+        a{
+            color: var(--MainColor);
+            font-size: 16px;
+            text-align: right;
+            font-family: var(--ArabicLinksFont);
+        }
+    }
+
+
+    .VoteBody{
+        margin: 15px 35px;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 15px;
+
+        .VoteDiv{
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            position: relative;
+            padding: 15px 20px;
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+            justify-content: flex-end;
+            width: 550px;
+            overflow: hidden;
+            
+
+            .VotBG{
+                width: 1%;
+                background-color: #201E2B;
+                position: absolute;
+                height: 100%;
+                right: 0;
+                top: 0;
+                z-index: 0;
+            }
+
+            .CorrectIcon{
+                color: var(--MainColor);
+                font-size: 15px;
+                z-index: 1;
+            }
+            
+
+            p{
+                font-family: var(--ArabicLinksFont);
+                color: whitesmoke;
+                font-size: 14px;
+                font-weight: 600;
+                z-index: 1;
+            }
+
+            span{
+                font-family: var(--ArabicLinksFont);
+                color: whitesmoke;
+                font-weight: 700;
+                z-index: 1;
+            }
+        }
+
+    }
+
+
+    .VoteChoice{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+        margin: 15px 0px;
+
+        button{
+            background-color: transparent;
+            border: 3px solid #201E2B;
+            border-radius: 20px;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            -ms-border-radius: 20px;
+            -o-border-radius: 20px;
+            font-family: var(--ArabicLinksFont);
+            color: whitesmoke;
+            font-weight: 700;
+            width: 550px;
+            height: 60px;
+            transition: .3s all linear;
+            -webkit-transition: .3s all linear;
+            -moz-transition: .3s all linear;
+            -ms-transition: .3s all linear;
+            -o-transition: .3s all linear;
+
+            &:hover{
+                color: #0D0C10;
+                background-color: var(--MainColor);
+            }
+        }
+    }
+
+
+    .Bottom-R-Post{
+        border-top: 3px solid #201E2B;
+        height: 70px;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        
+
+
+        button{
+            background-color: transparent;
+            color: whitesmoke;
+            font-family: var(--ArabicLinksFont);
+            font-size: 14px;
+            width: 100%;
+            gap: 10px;
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            justify-content: center;
+            transition: .3s all linear;
+            -webkit-transition: .3s all linear;
+            -moz-transition: .3s all linear;
+            -ms-transition: .3s all linear;
+            -o-transition: .3s all linear;
+
+            .BotIcon{
+                font-size: 20px;
+
+            }
+
+            .CommentIcon{
+                font-size: 17px;
+            }
+        }
+
+
+
+
+
+
+
+
+        button:hover{
+            background-color: var(--MainColor);
+            color: #0D0C10;
+        }
+
+    }
+
+
+
+    .OverDiv{
+        background-color: #1A1922;
+        width: 200px;
+        height: 230px;
+        position: absolute;
+        top: 60px;
+        right: 25px;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        z-index: 2;
+
+        .LineOver{
+            height: 4px;
+            width: 90%;
+            background-color: rgb(46, 43, 43);
+            align-self: center;
+        }
+
+        button{
+            height: 100%;
+            width: 100%;
+            background-color: transparent;
+            font-family: var(--ArabicLinksFont);
+            gap: 5px;
+            color: whitesmoke;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            justify-content: flex-end;
+            padding-right: 20px;
+            transition: .3s all linear;
+            -webkit-transition: .3s all linear;
+            -moz-transition: .3s all linear;
+            -ms-transition: .3s all linear;
+            -o-transition: .3s all linear;
+            
+
+            &:hover{
+                background-color: #201E2B;
+            }
+        }
+    }
+
+}
+
+
+

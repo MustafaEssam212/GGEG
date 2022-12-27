@@ -1,0 +1,80 @@
+
+
+.ProfileMessageContainer{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+    .InnerProfileMessage{
+        width: 95%;
+        height: 100%;
+        background-color: #1A1922;
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        justify-content: flex-end;
+        padding: 0px 25px;
+        position: relative;
+
+
+        .CloseIcon{
+            color: #5e5c68;
+            font-size: 20px;
+            position: absolute;
+            left: 15px;
+            cursor: var(--PointerCursor);
+            transition: .3s all linear;
+            -webkit-transition: .3s all linear;
+            -moz-transition: .3s all linear;
+            -ms-transition: .3s all linear;
+            -o-transition: .3s all linear;
+
+            &:hover{
+                color: var(--MainColor);
+            }
+        }
+
+        p{
+            font-family: var(--ArabicLinksFont);
+            color: var(--MainColor);
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        a{
+            text-decoration: none;
+            color: white;
+            margin: 0px 4px;
+            transition: .3s all linear;
+            -webkit-transition: .3s all linear;
+            -moz-transition: .3s all linear;
+            -ms-transition: .3s all linear;
+            -o-transition: .3s all linear;
+
+            &:hover{
+                color: #15141B;
+            }
+        }
+    }
+
+    .CircleProgress{
+        width: 60px;
+        height: 60px;
+        
+    }
+
+    .InnerCircle{
+        font-size: 13px;
+        font-family: var(--SecondEnglish);
+        font-weight: 500;
+        color: #ffffff;
+    }
+
+
+}

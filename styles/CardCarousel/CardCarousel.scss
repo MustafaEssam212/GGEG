@@ -1,0 +1,346 @@
+
+
+
+.Carousel{
+    z-index: 0;
+    padding-right: 25px;
+}
+
+
+.CarouselItem{
+    margin-right: 50px;
+}
+
+
+// Card Tournament Css
+
+
+.TourCard{
+    width: 300px;
+    background-color: #0D0C10;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+
+    .TopCard{
+        background-color: rgb(71, 66, 66);
+        height: 180px;
+
+        .FirstTopCard{
+            padding: 20px;
+            height: 50%;
+
+            h1{
+                font-family: var(--SecondEnglish);
+                color: white;
+                text-transform: uppercase;
+                line-height: 30px;
+            }
+        }
+
+        .SecondTopCard{
+
+            height: 50%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            padding: 20px;
+
+
+
+            h2{
+                font-family: var(--ArabicLinksFont);
+                color: white;
+                text-transform: uppercase;
+                line-height: 30px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+
+                .CoinsIcon{
+                    color: var(--MainColor);
+                    order: 2;
+                }
+
+                span{
+                    order: 1;
+                }
+            }
+        }
+    }
+
+
+    .CardName-Tags{
+        padding-left: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 15px;
+        height: 110px;
+
+
+
+        p{
+            font-family: var(--ArabicLinksFont);
+            color: white;
+            font-weight: 700;
+            font-size: 15px;
+
+        }
+
+        .CardTags{
+
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+
+            span{
+                font-family: var(--SecondEnglish);
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                font-size: 13px;
+                background-color: #242329;
+                padding: 4px 8px;
+                border-radius: 5px;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                -ms-border-radius: 5px;
+                -o-border-radius: 5px;
+                color: rgb(255, 255, 255);
+
+
+
+                
+
+                .TourIcon{
+                    font-size: 16px;
+
+                }
+
+                .CoinsIcon{
+                    color: #FFC831;
+                }
+
+
+            }
+
+
+            
+
+
+            span:nth-child(1){
+                background-color: #FFC831;
+                color: #0D0C10;
+            }
+        }
+    }
+
+    .CardLine{
+        width: 100%;
+        height: 1px;
+        background-color: #15141B;
+        margin-top: 10px;
+    }
+
+    .CardProgress{
+
+        width: 100%;
+        height: 80px;
+      
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        padding: 0px 20px;
+
+        .TopSecond{
+            display: flex;
+            justify-content: space-between;
+            
+            span{
+                font-family: var(--ArabicLinksFont);
+                color: var(--MainColor);
+                font-weight: 700;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+
+            }
+
+            span:nth-child(1){
+                font-size: 15px;
+            }
+            
+            span:nth-child(2){
+                font-size: 13px;
+                color: #01D387;
+                display: flex;
+                align-items: center;
+                gap: 7px;
+            }
+
+            span p{
+                width: 7px;
+                height: 7px;
+                background-color: #01D387;
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+}
+        }
+
+        .BottomSecond{
+            background-color: #15141B;
+            width: 80%;
+            height: 4px;
+            align-self: center;
+            border-radius: 15px;
+            -webkit-border-radius: 15px;
+            -moz-border-radius: 15px;
+            -ms-border-radius: 15px;
+            -o-border-radius: 15px;
+
+            .BotSecondBar{
+                background-color: var(--MainColor);
+                width: 80%;
+                height: 100%;
+                border-radius: 15px;
+                -webkit-border-radius: 15px;
+                -moz-border-radius: 15px;
+                -ms-border-radius: 15px;
+                -o-border-radius: 15px;
+
+            }
+        }
+    }
+
+    .CardBottom{
+     
+        height: 108px;
+        display: flex;
+
+        .LeftCardBot{
+            width: 50%;
+            border-right: 1px solid #15141B;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+
+            p{
+                font-family: var(--SecondEnglish);
+                color: var(--MainColor);
+                font-weight: 600;
+                font-size: 19px;
+                margin: 0;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                .CoinsIcon{
+                    color: var(--MainColor);
+                }
+            }
+
+            span{
+                font-family: var(--ArabicLinksFont);
+                color: rgb(206, 206, 206);
+                font-size: 12px;
+                font-weight: 600;
+            }
+        }
+
+        .RightCardBot{
+            @extend .LeftCardBot;
+            gap: 8px;
+
+            p{
+                font-family: var(--ArabicLinksFont);
+                font-size: 16px;
+            }
+            
+        }
+    }
+
+
+    @keyframes OverView {
+        from{
+            right: -150px;
+        }to{
+            right: 0;
+        }
+    }
+
+
+    @keyframes BackView {
+        from{
+            right: 0;
+        }to{
+            right: -150px;
+        }
+    }
+
+    .CardOverView{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 50%;
+        height: 108px;
+        background-color: var(--MainColor);
+        z-index: 1;
+        bottom: 0;
+        animation: .3s BackView ease-in forwards;
+        -webkit-animation: .3s BackView ease-in forwards;
+        
+        p{
+            font-family: var(--ArabicLinksFont);
+            font-size: 16px;
+            color: #15141B;
+            font-weight: 800;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        span{
+            font-family: var(--ArabicLinksFont);
+            color: #15141B;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+    }
+
+
+    a:hover .CardOverView{
+        animation: .3s OverView ease-in forwards;
+        -webkit-animation: .3s OverView ease-in forwards;
+    }
+
+
+    a:hover .CardName-Tags p{
+        transition: .3s all linear;
+        -webkit-transition: .3s all linear;
+        -moz-transition: .3s all linear;
+        -ms-transition: .3s all linear;
+        -o-transition: .3s all linear;
+        color: var(--MainColor);
+}
+
+
+
+}
